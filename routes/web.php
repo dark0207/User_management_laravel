@@ -46,6 +46,16 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
         Route::post('/profile/update', 'ProfileController@update')->name('profile.update');
 
         /**
+         * Session Routes
+         */
+        Route::get('/session', 'SessionController@index')->name('session.index');
+        Route::post('/session/{id}', 'SessionController@destory')->name('session.destory');
+        /**
+         * ActivityLog Routes
+         */
+        Route::get('/activitylog', 'ActivityLogController@index')->name('activitylog.index');
+
+        /**
          * Logout Routes
          */
         Route::get('/logout', 'LogoutController@perform')->name('logout.perform');

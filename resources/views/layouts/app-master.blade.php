@@ -55,23 +55,7 @@
 		<link href="{!! url('theme/plugins/horizontal-menu/dropdown-effects/fade-down.css') !!}" rel="stylesheet">
 		<link href="{!! url('theme/plugins/horizontal-menu/horizontal-menu.css') !!}" rel="stylesheet">
 
-		<!-- TABS CSS -->
-		<link href="{!! url('theme/plugins/tabs/tabs-style2.css') !!}" rel="stylesheet" type="text/css">
-
-		<!-- SELECT2 CSS -->
-		<link href="{!! url('theme/plugins/select2/select2.min.css') !!}" rel="stylesheet"/>
-
-		<!-- TIME PICKER CSS -->
-		<link href="{!! url('theme/plugins/time-picker/jquery.timepicker.css') !!}" rel="stylesheet"/>
-
-		<!-- DATE PICKER CSS -->
-		<link href="{!! url('theme/plugins/spectrum-date-picker/spectrum.css') !!}" rel="stylesheet"/>
-
-		<!-- MULTI SELECT CSS -->
-		<link rel="stylesheet" href="{!! url('theme/plugins/multipleselect/multiple-select.css') !!}">
-
-		<!-- FILE UPLODES -->
-    <link href="{!! url('theme/plugins/fileuploads/css/dropify.min.css') !!}" rel="stylesheet" type="text/css"/>
+		@stack('styles')
 
 	</head>
 	<body class="app sidebar-mini rtl color1 sidenav-toggled1 sidenav-toggled">
@@ -103,7 +87,14 @@
 				<!--sidemenu end-->
 
 				<!-- app-content-->
-				@yield('content')
+				<div class="app-content  my-3 my-md-5">
+
+					@include('layouts.partials.navbar')
+					
+					@yield('content')
+
+				</div>
+				
 			</div>
 
 
@@ -165,41 +156,7 @@
 		<!-- CUSTOM JS-->
 		<script src="{!! url('theme/js/custom.js') !!}"></script>
 
-    
-
-		<!-- C3.JS CHART PLUGIN -->
-		<script src="{!! url('theme/plugins/charts-c3/d3.v5.min.js') !!}"></script>
-		<script src="{!! url('theme/plugins/charts-c3/c3-chart.js') !!}"></script>
-
-    <!-- CUSTOM SCROLLBAR -->
-		<script src="{!! url('theme/plugins/mcustomscrollbar/jquery.mCustomScrollbar.concat.min.js') !!}"></script>
-
-		<!-- SELECT2 PLUGIN -->
-		<script src="{!! url('theme/plugins/select2/select2.full.min.js') !!}"></script>
-
-		<!-- TIMEPICKER JS -->
-		<script src="{!! url('theme/plugins/time-picker/jquery.timepicker.js') !!}"></script>
-		<script src="{!! url('theme/plugins/time-picker/toggles.min.js') !!}"></script>
-
-		<!-- DATEPICKER JS -->
-		<script src="{!! url('theme/plugins/spectrum-date-picker/spectrum.js') !!}"></script>
-		<script src="{!! url('theme/plugins/spectrum-date-picker/jquery-ui.js') !!}"></script>
-		<script src="{!! url('theme/plugins/input-mask/jquery.maskedinput.js') !!}"></script>
-
-		<!-- DATA TABLE -->
-		<script src="{!! url('theme/plugins/datatable/jquery.dataTables.min.js') !!}"></script>
-		<script src="{!! url('theme/plugins/datatable/dataTables.bootstrap4.min.js') !!}"></script>
-
-		<!-- SELECT2 JS -->
-		<script src="{!! url('theme/js/select2.js') !!}"></script>
-
-		<!-- FILE UPLOADES JS -->
-        <script src="{!! url('theme/plugins/fileuploads/js/dropify.min.js') !!}"></script>
-        <script src="{!! url('theme/plugins/fileuploads/js/file-upload.js') !!}"></script>
-
-		<!-- MULTI SELECT JS-->
-		<script src="{!! url('theme/plugins/multipleselect/multiple-select.js') !!}"></script>
-		<script src="{!! url('theme/plugins/multipleselect/multi-select.js') !!}"></script>
-
+		@stack('scripts')
+	
 	</body>
 </html>

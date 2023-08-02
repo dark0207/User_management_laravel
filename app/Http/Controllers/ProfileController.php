@@ -21,7 +21,7 @@ class ProfileController extends Controller
             $company_ids = unserialize($profile->company_ids);
         }
        
-        return view('profile.index', compact('title', 'profile', 'companies', 'company_ids'));
+        return view('profile.index', compact('profile', 'companies', 'company_ids'));
     }
 
     public function update(ProfileRequest $request) {

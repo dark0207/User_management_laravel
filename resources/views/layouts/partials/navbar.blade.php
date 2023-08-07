@@ -14,7 +14,7 @@
         <form action="{{ route('setlocale') }}" method="GET" style="margin: 10px">
           <select class="form-control select2 w-100" name="locale" onchange="this.form.submit()">
               <option value="en" {{ app()->getLocale() == 'en' ? 'selected' : '' }}>English</option>
-              <option value="es" {{ app()->getLocale() == 'es' ? 'selected' : '' }}>Spanish</option>
+              {{-- <option value="es" {{ app()->getLocale() == 'es' ? 'selected' : '' }}>Spanish</option> --}}
               <!-- Add more language options as needed -->
           </select>
         </form>

@@ -16,7 +16,6 @@
     <script src="{!! url('theme/plugins/datatable/dataTables.responsive.min.js') !!}"></script>
     <!-- NOTIFICATIONS JS -->
     <script src="{!! url('theme/plugins/notify-growl/js/rainbow.js') !!}"></script>
-    <script src="{!! url('theme/plugins/notify-growl/js/sample.js') !!}"></script>
     <script src="{!! url('theme/plugins/notify-growl/js/jquery.growl.js') !!}"></script>   
 @endpush
 
@@ -32,10 +31,10 @@
                             <table id="example" class="table table-striped table-bordered text-nowrap w-100">
                                 <thead>
                                     <tr>
-                                        <th class="wd-15p">IP Address</th>
-                                        <th class="wd-15p">Message</th>
-                                        <th class="wd-20p">Log Time</th>
-                                        <th class="wd-15p">More Info</th>
+                                        <th class="wd-15p">{{ __('global.ip_address') }}</th>
+                                        <th class="wd-15p">{{ __('global.message') }}</th>
+                                        <th class="wd-20p">{{ __('global.log_time') }}</th>
+                                        <th class="wd-15p">{{ __('global.more_info') }}</th>
                                     </tr>
                                 </thead>
                                 <tbody>

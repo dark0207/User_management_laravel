@@ -10,7 +10,14 @@
       <!-- LOGO -->
       <a aria-label="Hide Sidebar" class="app-sidebar__toggle" data-toggle="sidebar" href="#"></a>
       <div class="d-flex order-lg-2 ml-auto header-right-icons header-search-icon">
-      
+        
+        <form action="{{ route('setlocale') }}" method="GET" style="margin: 10px">
+          <select class="form-control select2 w-100" name="locale" onchange="this.form.submit()">
+              <option value="en" {{ app()->getLocale() == 'en' ? 'selected' : '' }}>English</option>
+              <option value="es" {{ app()->getLocale() == 'es' ? 'selected' : '' }}>Spanish</option>
+              <!-- Add more language options as needed -->
+          </select>
+        </form>
         <div class="dropdown text-center selector profile-1 d-sm-flex d-none">
           <a href="#" data-toggle="dropdown" class="nav-link leading-none d-flex">
             <span><img src="{!! url('theme/images/faces/female/16.jpg') !!}" alt="profile-user" class="avatar brround cover-image mb-1 ml-0"></span>
@@ -20,14 +27,14 @@
               <a href="#" class="dropdown-item text-center font-weight-sembold user pt-0" data-toggle="dropdown">{{auth()->user()->username}}</a>
             </div>
             <a class="dropdown-item" href="{{ route('profile.index') }}">
-              <i class="dropdown-icon mdi mdi-account-outline"></i>My Profile
+              <i class="dropdown-icon mdi mdi-account-outline"></i>{{ __('global.my_profile') }}
             </a>
             <a class="dropdown-item" href="{{ route('session.index') }}">
-              <i class="dropdown-icon mdi icon-list"></i>Active Sessions
+              <i class="dropdown-icon mdi icon-list"></i>{{ __('global.active_sessions') }}
             </a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="{{ route('logout.perform') }}">
-              <i class="dropdown-icon mdi  mdi-logout-variant"></i> Sign out
+              <i class="dropdown-icon mdi  mdi-logout-variant"></i> {{ __('global.logout') }}
             </a>
           </div>
         </div><!-- PROFILE -->

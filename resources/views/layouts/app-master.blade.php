@@ -79,7 +79,7 @@
 					<div class="side-tab-body p-0 border-0 resp-vtabs hor_1">
 						<div class="first-sidemenu">
 							<ul class="resp-tabs-list hor_1">
-								<li data-toggle="tooltip" data-placement="right" title="Home" class="resp-tab-item hor_1"><i class="side-menu__icon typcn typcn-device-desktop"></i><div class="slider-text">Home</div></li>
+								<li data-toggle="tooltip" data-placement="right" title="Home" class="resp-tab-item hor_1"><i class="side-menu__icon typcn typcn-device-desktop"></i><div class="slider-text">{{ __('global.home') }}</div></li>
 							</ul>
 						</div>
 					</div>

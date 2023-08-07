@@ -12,17 +12,17 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
-                        <h3 class="card-title">Active Sessions</h3>
+                        <h3 class="card-title">{{ __('global.active_sessions') }}</h3>
                     </div>
                     <div class="table-responsive">
                         <table class="table card-table table-vcenter text-nowrap">
                             <thead >
                                 <tr>
-                                    <th>IP Address</th>
-                                    <th>Device</th>
-                                    <th>Browser</th>
-                                    <th>Last Activity</th>
-                                    <th class="text-center">Action</th>
+                                    <th>{{ __('global.ip_address') }}</th>
+                                    <th>{{ __('global.device') }}</th>
+                                    <th>{{ __('global.browser') }}</th>
+                                    <th>{{ __('global.last_activity') }}</th>
+                                    <th class="text-center">{{ __('global.action') }}</th>
                                 </tr>
                             </thead>
                             <tbody>

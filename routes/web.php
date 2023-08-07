@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Http\Request;
 
 /*
 |--------------------------------------------------------------------------
@@ -61,3 +62,12 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
         Route::get('/logout', 'LogoutController@perform')->name('logout.perform');
     });
 });
+
+Route::get('/setlocale', function(Request $request) {
+
+    // Store the selected locale in the session or any other storage mechanism
+    session(['locale' => $request->locale]);
+
+    // Redirect back to the previous URL
+    return redirect()->back();
+})->name('setlocale');

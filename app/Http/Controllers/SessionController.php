@@ -25,8 +25,10 @@ class SessionController extends Controller
     * @param  \App\Company  $company
     * @return \Illuminate\Http\Response
     */
-    public function destroy(Session $session)
+    public function destroy($id)
     {
+    
+        $session = Session::find($id);
         $session->delete();
         return redirect()->route('session.index')->with('success','session has been deleted successfully');
     }

@@ -17,7 +17,7 @@ return [
     |
     */
 
-    'default' => env('LOG_CHANNEL', 'database'),
+    'default' => env('LOG_CHANNEL', 'single'),
 
     /*
     |--------------------------------------------------------------------------
@@ -50,14 +50,8 @@ return [
     'channels' => [
         'stack' => [
             'driver' => 'stack',
-            'channels' => ['single', 'database'],
+            'channels' => ['single'],
             'ignore_exceptions' => false,
-        ],
-
-        'database' => [
-            'driver' => 'database',
-            'table' => 'logs',
-            'level' => env('DB_CONNECTION', 'mysql'),
         ],
 
         'single' => [

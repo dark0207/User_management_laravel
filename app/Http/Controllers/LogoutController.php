@@ -15,6 +15,8 @@ class LogoutController extends Controller
      */
     public function perform()
     {
+        \LogActivity::addToLog('Logged out.');
+
         Session::flush();
         
         Auth::logout();

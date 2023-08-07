@@ -33,9 +33,9 @@
                                     <td>{{ $session->last_activity }}</td>
                                     
                                     <td class="text-center">
-                                        <form action="{{ route('session.destory', $session->id) }}" method="Post">
+                                        <form action="{{ route('session.destroy', $session->id) }}" method="Post">
                                             @csrf
-                                            @method('DELETE')
+                                            @method('POST')
                                             <button class="btn btn-sm btn-primary-light badge" type="submit"><i class="fa fa-trash"></i></button>
                                         </form>
                                     </td>

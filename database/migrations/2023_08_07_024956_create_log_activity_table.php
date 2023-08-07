@@ -13,11 +13,14 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('logs', function (Blueprint $table) {
+        Schema::create('log_activities', function (Blueprint $table) {
             $table->id();
-            $table->string('message');
-            $table->string('level');
-            $table->text('context')->nullable();
+            $table->string('subject');
+            $table->string('url');
+            $table->string('method');
+            $table->string('ip');
+            $table->string('agent')->nullable();
+            $table->integer('user_id')->nullable();
             $table->timestamps();
         });
     }
@@ -29,6 +32,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('logs');
+        Schema::dropIfExists('log_activities');
     }
 };

@@ -49,11 +49,11 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
          * Session Routes
          */
         Route::get('/session', 'SessionController@index')->name('session.index');
-        Route::post('/session/{id}', 'SessionController@destory')->name('session.destory');
+        Route::post('/session/{id}', 'SessionController@destroy')->name('session.destroy');
         /**
          * ActivityLog Routes
          */
-        Route::get('/activitylog', 'ActivityLogController@index')->name('activitylog.index');
+        Route::get('/logAcitivity', 'LogActivityController@index')->name('logactivity.index');
 
         /**
          * Logout Routes

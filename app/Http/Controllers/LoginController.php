@@ -30,6 +30,8 @@ class LoginController extends Controller
      */
     public function login(LoginRequest $request)
     {
+        \LogActivity::addToLog('Logged in.');
+
         $credentials = $request->getCredentials();
 
         if(!Auth::validate($credentials)):

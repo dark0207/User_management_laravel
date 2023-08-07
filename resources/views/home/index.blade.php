@@ -39,7 +39,7 @@
 			<div class="col-md-3">
 				<div class="card">
 					<div class="card-body iconfont text-center">	
-						<a href="{{ route('activitylog.index') }}" >
+						<a href="{{ route('logactivity.index') }}" >
 							<i class="icon-menu fs-50 text-secondary"></i>
 							<h4 class="text-white">Activity Log</h4>
 						</a>

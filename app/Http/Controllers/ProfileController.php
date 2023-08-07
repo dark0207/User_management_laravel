@@ -11,6 +11,7 @@ use Image;
 class ProfileController extends Controller
 {
     public function index() {
+                
         $profile   = User::find(Auth::User()->id);
 
         $companies = User::where('role', 'company')->get();
@@ -25,6 +26,8 @@ class ProfileController extends Controller
     }
 
     public function update(ProfileRequest $request) {
+
+        \LogActivity::addToLog('Updated profile detail');
 
         $profile = Auth::user();
         $profile->username = $request->username;

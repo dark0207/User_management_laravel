@@ -3,6 +3,7 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use App\Rules\MinLengthAndNumeric;
 
 class RegisterRequest extends FormRequest
 {
@@ -24,8 +25,8 @@ class RegisterRequest extends FormRequest
     public function rules()
     {
         return [
+            'username' => ['required','unique:users,username', new MinLengthAndNumeric(12) ],
             'email' => 'required|email:rfc,dns|unique:users,email',
-            'username' => 'required|digits_between:12, 255|unique:users,username',
             'password' => 'required|min:8',
             'password_confirmation' => 'required|same:password'
         ];

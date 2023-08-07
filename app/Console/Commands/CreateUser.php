@@ -46,7 +46,7 @@ class CreateUser extends Command
         $digits = '1234567890';
         $digitslength = 13;
         for ($i = 0; $i < $digitslength; $i++) {
-            $username .= $digits[rand(0, strlen($characters) - 1)];
+            $username .= $digits[rand(0, strlen($digits) - 1)];
         }
   
         $password = '12346678';
